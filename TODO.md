@@ -6,7 +6,7 @@
 - ~~Newline between class members~~
 - Newline after variable declaration block **(Bugged)**
 - No multiple empty lines **(How?)**
-- Document all class fields
+- Document all public class members
 - Document all public classes
 - Trailing spaces not allowed **(How?)**
 - ~~No side effects (instanciation of class without assignation)~~
@@ -30,3 +30,5 @@
   14. operator ==, hashCode, toString, and diagnostics-related methods, in that order.
 - ~~Prefer inline opening square and curly brackets~~ **(Works for everything but anonymous blocks)**
 - Prefer 3+ arguments each on a new line
+- Blank space before opening bracket
+- Blank space around operators

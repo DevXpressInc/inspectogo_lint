@@ -22,6 +22,7 @@ import 'src/lints/dart/avoid_redundant_pattern_field_names.dart';
 import 'src/lints/dart/avoid_unused_parameters.dart';
 import 'src/lints/dart/boolean_prefixes.dart';
 import 'src/lints/dart/class_members_ordering.dart';
+import 'src/lints/dart/document_public_classes.dart';
 import 'src/lints/dart/max_length.dart';
 import 'src/lints/dart/max_lines_for_file.dart';
 import 'src/lints/dart/max_lines_for_function.dart';
@@ -80,6 +81,7 @@ class _PyramidLinter extends PluginBase {
         AvoidUnusedParameters.fromConfigs(configs),
         BooleanPrefixes.fromConfigs(configs),
         ClassMembersOrdering.fromConfigs(configs),
+        DocumentPublicClasses.fromConfigs(configs),
         MaxLength.fromConfigs(configs),
         MaxLinesForFile.fromConfigs(configs),
         MaxLinesForFunction.fromConfigs(configs),
