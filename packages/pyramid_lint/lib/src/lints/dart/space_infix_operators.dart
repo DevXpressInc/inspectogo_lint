@@ -79,8 +79,36 @@ class SpaceInfixOperators extends PyramidLintRule {
       if (leftSameLine && leftSpacing < 2 || rightSameLine && rightSpacing < 2) {
         final customMessage = code.problemMessage.replaceFirst('{operator}', operator.lexeme);
         final customCode = code.copyWith(problemMessage: customMessage);
+
         reporter.reportErrorForOffset(customCode, operator.offset, operator.length);
       }
+    });
+  }
+  @override
+  List<Fix> getFixes() => [_AddSpacingToInfixOperator()];
+}
+
+class _AddSpacingToInfixOperator extends DartFix {
+  @override
+  void run(
+    CustomLintResolver resolver,
+    ChangeReporter reporter,
+    CustomLintContext context,
+    AnalysisError analysisError,
+    List<AnalysisError> others,
+  ) {
+    context.registry.addAssignmentExpression((node) {
+      if (!analysisError.sourceRange.intersects(node.sourceRange)) return;
+
+      final changeBuilder = reporter.createChangeBuilder(
+        message: 'Add spacing around operator',
+        priority: 80,
+      );
+
+      // TODO: Implement this correctly
+      changeBuilder.addDartFileEdit((builder) {
+        builder.addSimpleInsertion(node.operator.offset, ' ');
+      });
     });
   }
 }

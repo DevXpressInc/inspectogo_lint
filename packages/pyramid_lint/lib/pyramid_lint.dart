@@ -22,6 +22,7 @@ import 'src/lints/dart/avoid_redundant_pattern_field_names.dart';
 import 'src/lints/dart/avoid_unused_parameters.dart';
 import 'src/lints/dart/boolean_prefixes.dart';
 import 'src/lints/dart/class_members_ordering.dart';
+import 'src/lints/dart/debug_find_vm_uri.dart';
 import 'src/lints/dart/document_class_members.dart';
 import 'src/lints/dart/document_public_classes.dart';
 import 'src/lints/dart/max_length.dart';
@@ -33,10 +34,12 @@ import 'src/lints/dart/newline_between_class_members.dart';
 import 'src/lints/dart/no_duplicate_imports.dart';
 import 'src/lints/dart/no_self_comparisons.dart';
 import 'src/lints/dart/no_side_effects.dart';
+import 'src/lints/dart/no_trailing_spaces.dart';
 import 'src/lints/dart/prefer_async_await.dart';
 import 'src/lints/dart/prefer_const_constructor_declarations.dart';
 import 'src/lints/dart/prefer_immediate_return.dart';
 import 'src/lints/dart/prefer_inline_brackets.dart';
+import 'src/lints/dart/prefer_inline_else.dart';
 import 'src/lints/dart/prefer_iterable_any.dart';
 import 'src/lints/dart/prefer_iterable_every.dart';
 import 'src/lints/dart/prefer_iterable_first.dart';
@@ -45,6 +48,7 @@ import 'src/lints/dart/prefer_library_prefixes.dart';
 import 'src/lints/dart/prefer_new_line_before_return.dart';
 import 'src/lints/dart/prefer_underscore_for_unused_callback_parameters.dart';
 import 'src/lints/dart/space_infix_operators.dart';
+import 'src/lints/dart/too_many_inline_arguments.dart';
 import 'src/lints/dart/unnecessary_nullable_return_type.dart';
 import 'src/lints/flutter/avoid_public_members_in_states.dart';
 import 'src/lints/flutter/avoid_returning_widgets.dart';
@@ -93,11 +97,13 @@ class _PyramidLinter extends PluginBase {
         NewlineBetweenClassMembers.fromConfigs(configs),
         NoDuplicateImports.fromConfigs(configs),
         NoSelfComparisons.fromConfigs(configs),
+        NoTrailingSpaces.fromConfigs(configs),
         NoSideEffects.fromConfigs(configs),
         PreferAsyncAwait.fromConfigs(configs),
         PreferConstConstructorDeclarations.fromConfigs(configs),
         PreferImmediateReturn.fromConfigs(configs),
         PreferInlineBrackets.fromConfigs(configs),
+        PreferInlineElse.fromConfigs(configs),
         PreferIterableAny.fromConfigs(configs),
         PreferIterableEvery.fromConfigs(configs),
         PreferIterableFirst.fromConfigs(configs),
@@ -106,6 +112,7 @@ class _PyramidLinter extends PluginBase {
         PreferNewLineBeforeReturn.fromConfigs(configs),
         PreferUnderscoreForUnusedCallbackParameters.fromConfigs(configs),
         SpaceInfixOperators.fromConfigs(configs),
+        TooManyInlineArguments.fromConfigs(configs),
         UnnecessaryNullableReturnType.fromConfigs(configs),
         // Flutter lints
         AvoidPublicMembersInStates.fromConfigs(configs),

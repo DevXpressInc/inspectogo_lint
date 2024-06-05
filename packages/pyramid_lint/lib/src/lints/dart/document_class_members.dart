@@ -1,10 +1,10 @@
 import 'package:analyzer/dart/ast/ast.dart';
-import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 import '../../pyramid_lint_rule.dart';
+import '../../utils/ast_node_extensions.dart';
 
 class DocumentClassMembers extends PyramidLintRule {
   DocumentClassMembers({required super.options})
@@ -42,6 +42,8 @@ class DocumentClassMembers extends PyramidLintRule {
 
         final int reportLength;
         if (node is MethodDeclaration) {
+          /// TODO: keep state and track if either setter or getter is already commented instead
+          if (node.isSetter) return;
           reportLength = node.body.beginToken.offset - node.offset;
         } else if (node is ConstructorDeclaration) {
           reportLength = node.body.beginToken.offset - node.offset;
