@@ -15,7 +15,7 @@ class NewlineAfterVar extends PyramidLintRule {
           correctionMessage:
               'Add a blank line',
           url: url,
-          errorSeverity: ErrorSeverity.INFO,
+          errorSeverity: ErrorSeverity.WARNING,
         );
 
   static const ruleName = 'newline_after_var';

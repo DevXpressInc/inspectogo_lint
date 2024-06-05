@@ -27,12 +27,14 @@ import 'src/lints/dart/max_lines_for_file.dart';
 import 'src/lints/dart/max_lines_for_function.dart';
 import 'src/lints/dart/max_switch_cases.dart';
 import 'src/lints/dart/newline_after_var.dart';
+import 'src/lints/dart/newline_between_class_members.dart';
 import 'src/lints/dart/no_duplicate_imports.dart';
 import 'src/lints/dart/no_self_comparisons.dart';
 import 'src/lints/dart/no_side_effects.dart';
 import 'src/lints/dart/prefer_async_await.dart';
 import 'src/lints/dart/prefer_const_constructor_declarations.dart';
 import 'src/lints/dart/prefer_immediate_return.dart';
+import 'src/lints/dart/prefer_inline_brackets.dart';
 import 'src/lints/dart/prefer_iterable_any.dart';
 import 'src/lints/dart/prefer_iterable_every.dart';
 import 'src/lints/dart/prefer_iterable_first.dart';
@@ -83,12 +85,14 @@ class _PyramidLinter extends PluginBase {
         MaxLinesForFunction.fromConfigs(configs),
         MaxSwitchCases.fromConfigs(configs),
         NewlineAfterVar.fromConfigs(configs),
+        NewlineBetweenClassMembers.fromConfigs(configs),
         NoDuplicateImports.fromConfigs(configs),
         NoSelfComparisons.fromConfigs(configs),
         NoSideEffects.fromConfigs(configs),
         PreferAsyncAwait.fromConfigs(configs),
         PreferConstConstructorDeclarations.fromConfigs(configs),
         PreferImmediateReturn.fromConfigs(configs),
+        PreferInlineBrackets.fromConfigs(configs),
         PreferIterableAny.fromConfigs(configs),
         PreferIterableEvery.fromConfigs(configs),
         PreferIterableFirst.fromConfigs(configs),
