@@ -7,6 +7,8 @@ analyzer:
     - test/golden.dart
 
 custom_lint:
+  debug: true
+  verbose: true
   rules:
     # Dart lints
     - always_put_doc_comments_before_annotations
@@ -28,6 +30,7 @@ custom_lint:
     - max_lines_for_function
     - max_switch_cases:
       max_cases: 5
+    - newline_after_var
     - no_duplicate_imports
     - no_self_comparisons
     - prefer_async_await

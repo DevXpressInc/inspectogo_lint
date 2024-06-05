@@ -22,11 +22,14 @@ import 'src/lints/dart/avoid_redundant_pattern_field_names.dart';
 import 'src/lints/dart/avoid_unused_parameters.dart';
 import 'src/lints/dart/boolean_prefixes.dart';
 import 'src/lints/dart/class_members_ordering.dart';
+import 'src/lints/dart/max_length.dart';
 import 'src/lints/dart/max_lines_for_file.dart';
 import 'src/lints/dart/max_lines_for_function.dart';
 import 'src/lints/dart/max_switch_cases.dart';
+import 'src/lints/dart/newline_after_var.dart';
 import 'src/lints/dart/no_duplicate_imports.dart';
 import 'src/lints/dart/no_self_comparisons.dart';
+import 'src/lints/dart/no_side_effects.dart';
 import 'src/lints/dart/prefer_async_await.dart';
 import 'src/lints/dart/prefer_const_constructor_declarations.dart';
 import 'src/lints/dart/prefer_immediate_return.dart';
@@ -75,11 +78,14 @@ class _PyramidLinter extends PluginBase {
         AvoidUnusedParameters.fromConfigs(configs),
         BooleanPrefixes.fromConfigs(configs),
         ClassMembersOrdering.fromConfigs(configs),
+        MaxLength.fromConfigs(configs),
         MaxLinesForFile.fromConfigs(configs),
         MaxLinesForFunction.fromConfigs(configs),
         MaxSwitchCases.fromConfigs(configs),
+        NewlineAfterVar.fromConfigs(configs),
         NoDuplicateImports.fromConfigs(configs),
         NoSelfComparisons.fromConfigs(configs),
+        NoSideEffects.fromConfigs(configs),
         PreferAsyncAwait.fromConfigs(configs),
         PreferConstConstructorDeclarations.fromConfigs(configs),
         PreferImmediateReturn.fromConfigs(configs),
