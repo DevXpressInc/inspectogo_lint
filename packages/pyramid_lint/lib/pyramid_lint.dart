@@ -22,6 +22,7 @@ import 'src/lints/dart/avoid_redundant_pattern_field_names.dart';
 import 'src/lints/dart/avoid_unused_parameters.dart';
 import 'src/lints/dart/boolean_prefixes.dart';
 import 'src/lints/dart/class_members_ordering.dart';
+import 'src/lints/dart/document_class_members.dart';
 import 'src/lints/dart/document_public_classes.dart';
 import 'src/lints/dart/max_length.dart';
 import 'src/lints/dart/max_lines_for_file.dart';
@@ -43,6 +44,7 @@ import 'src/lints/dart/prefer_iterable_last.dart';
 import 'src/lints/dart/prefer_library_prefixes.dart';
 import 'src/lints/dart/prefer_new_line_before_return.dart';
 import 'src/lints/dart/prefer_underscore_for_unused_callback_parameters.dart';
+import 'src/lints/dart/space_infix_operators.dart';
 import 'src/lints/dart/unnecessary_nullable_return_type.dart';
 import 'src/lints/flutter/avoid_public_members_in_states.dart';
 import 'src/lints/flutter/avoid_returning_widgets.dart';
@@ -81,6 +83,7 @@ class _PyramidLinter extends PluginBase {
         AvoidUnusedParameters.fromConfigs(configs),
         BooleanPrefixes.fromConfigs(configs),
         ClassMembersOrdering.fromConfigs(configs),
+        DocumentClassMembers.fromConfigs(configs),
         DocumentPublicClasses.fromConfigs(configs),
         MaxLength.fromConfigs(configs),
         MaxLinesForFile.fromConfigs(configs),
@@ -102,6 +105,7 @@ class _PyramidLinter extends PluginBase {
         PreferLibraryPrefixes.fromConfigs(configs),
         PreferNewLineBeforeReturn.fromConfigs(configs),
         PreferUnderscoreForUnusedCallbackParameters.fromConfigs(configs),
+        SpaceInfixOperators.fromConfigs(configs),
         UnnecessaryNullableReturnType.fromConfigs(configs),
         // Flutter lints
         AvoidPublicMembersInStates.fromConfigs(configs),
