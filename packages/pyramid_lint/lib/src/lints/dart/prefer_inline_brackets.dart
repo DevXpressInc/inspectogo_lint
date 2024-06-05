@@ -67,5 +67,21 @@ class PreferInlineBrackets extends PyramidLintRule {
         reporter.reportErrorForOffset(code, leftBracket.offset, 1);
       }
     });
+    context.registry.addSetOrMapLiteral((node) {
+      final leftBracket = node.leftBracket;
+      final previousToken = node.beginToken.previous;
+      
+      if (previousToken == null) return;
+
+      // TODO: Find a way to handle anonymous blocks
+
+      final lineInfo = resolver.lineInfo;
+      final leftBracketLine = lineInfo.getLocation(leftBracket.offset).lineNumber;
+      final previousTokenLine = lineInfo.getLocation(previousToken.offset).lineNumber;
+
+      if (leftBracketLine - previousTokenLine > 0) {
+        reporter.reportErrorForOffset(code, leftBracket.offset, 1);
+      }
+    });
   }
 }
