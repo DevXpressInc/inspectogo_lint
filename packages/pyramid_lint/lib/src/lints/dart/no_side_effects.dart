@@ -38,9 +38,13 @@ class NoSideEffects extends PyramidLintRule {
     context.registry.addInstanceCreationExpression((node) {
       final previousToken = node.beginToken.previous;
       
-      if (previousToken == null || previousToken.type != TokenType.EQ) {
+      if (previousToken == null || !(_isReturnToken(previousToken) || previousToken.type == TokenType.EQ)) {
         reporter.reportErrorForNode(code, node);
       }
     });
+  }
+
+  bool _isReturnToken(Token token) {
+    return token is Keyword && token.keyword == Keyword.RETURN;
   }
 }
