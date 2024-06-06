@@ -1,4 +1,4 @@
-name: pyramid_lint
+name: cxpress_lint
 description: >-
   Linting tool for Dart and Flutter projects to encourage good coding practices.
 version: 2.0.0

@@ -1,5 +1,5 @@
-name: pyramid_lint_test
-description: Test for pyramid_lint
+name: cxpress_lint_test
+description: Test for cxpress_lint
 publish_to: none
 
 environment:
