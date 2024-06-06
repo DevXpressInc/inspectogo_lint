@@ -22,7 +22,6 @@ import 'src/lints/dart/avoid_redundant_pattern_field_names.dart';
 import 'src/lints/dart/avoid_unused_parameters.dart';
 import 'src/lints/dart/boolean_prefixes.dart';
 import 'src/lints/dart/class_members_ordering.dart';
-import 'src/lints/dart/debug_find_vm_uri.dart';
 import 'src/lints/dart/document_class_members.dart';
 import 'src/lints/dart/document_public_classes.dart';
 import 'src/lints/dart/max_length.dart';
